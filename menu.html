@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-family: 'Open Sans',sans-serif;
+            margin:0;
+            padding:0;
+        }
+        nav {
+            margin:5px 5px;
+        }
+        nav ul{
+            list-style:none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li{
+            float: left;
+            width: 150px;
+            height: 40 px;
+            line-height: 40px;
+            text-align: center;
+            position: relative;
+            display: block;
+            
+        }
+        nav li a{
+            border: 1px solid lightgrey;
+            width: 100%;
+            height: 100%;
+            display: block;
+            color: white;
+            text-decoration:none;
+        }
+        nav li a:hover{
+            background-color:lightseagreen
+        }
+        nav ul.sub{
+            position: absolute;
+            display: none;
+        }
+    </style>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function(){
+         $('.main li').hover(
+          function(){
+              $('>ul.sub',this).slideDown(500);
+          },
+             function(){
+                 $('>ul.sub',this).slideUp(300);
+             }
+         )
+    });
+    </script>
+</head>
+<body bgcolor='gray'>
+<a href=frame.html target="right"><img src="logo.png" width="5%" height="70%"></a>
+<nav>
+<ul class="main">
+	
+	<li><a href='main.html' target='main'>HOME</a></li>
+    <li><a href='profile.html' target='main'>ABOUT</a>
+    <ul class="sub">
+            <li><a href="profile.html" target='main'>PROFILE</a></li>
+            <li><a href="team.html" target='main'>TEAM</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">PROJECTS</a>
+        <ul class="sub">
+            <li><a href="residential.html" target='main'>RESIDENTIAL</a></li>
+            <li><a href="commerical.html" target='main'>COMMERCIAL</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">RECOGNITIONS</a>
+        <ul class="sub">
+            <li><a href="award.html" target='main'>AWARDS</a></li>
+            <li><a href="honour.html" target='main'>HONOURS</a></li>
+        </ul>
+    </li>
+    <li><a href="photo.html" target='main'>PHOTOGRAPHY</a></li>
+    <li><a href="en.html" target='main'>CONTACT</a></li>
+	<li><a href="https://www.facebook.com/aditya.pawar.1510" target='_blank'><img src='fb.png' width='25' height='25'>FACEBOOK</a></li>
+</ul>
+   </nav> 
+</body>
+</html>

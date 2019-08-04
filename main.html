@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+#sliderContainer {
+  width: 1500px;
+  margin: 0;
+  padding: 0px;
+  top=100px;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+        top: 50%;
+        margin-left: -700px;
+        margin-top: 00px;
+}
+#sliderContainer .slider {
+  margin: 100;
+  padding: 100;
+  width: 1500px;
+  float: left;
+  position: relative;
+  
+}
+    </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function() {
+  var curPos = 0;
+  var slider = $('.slider');
+  var cntImages= slider.length;
+  var sliderWidth = slider.width();
+  $('#sliderWrapper').css('width', sliderWidth * cntImages);
+  setInterval(SlideImage, 2000);
+
+  function SlideImage() {
+    if (curPos == cntImages - 1)
+      curPos = 0;
+    else
+      curPos++;
+     $('#sliderWrapper').animate({
+      'marginLeft': sliderWidth * (-curPos)
+    });
+  }
+});
+    </script>
+</head>
+<body bgcolor='gray'>
+<div id="sliderContainer">
+   <div id="sliderWrapper">
+      <img class="slider" src="1.jpg"/>
+      <img class="slider" src="2.jpg" />
+      <img class="slider" src="3.jpg" />
+	  <img class="slider" src="4.jpg"/>
+      <img class="slider" src="5.jpg" />
+      <img class="slider" src="6.jpg" />
+	  <img class="slider" src="7.jpg"/>
+      <img class="slider" src="8.jpg" />
+      <img class="slider" src="9.jpg" />
+	  <img class="slider" src="10.jpg"/>
+      <img class="slider" src="11.jpg" />
+      <img class="slider" src="12.jpg" />
+         </div>
+</div>
+<embed src="1.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed> 
+</body>
+</html>
